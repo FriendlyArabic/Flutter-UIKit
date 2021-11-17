@@ -66,7 +66,7 @@ class _AgoraVideoViewerState extends State<AgoraVideoViewer> {
   @override
   void dispose() {
     super.dispose();
-    widget.client.sessionController.dispose();
+    //widget.client.sessionController.dispose();
   }
 
   @override
