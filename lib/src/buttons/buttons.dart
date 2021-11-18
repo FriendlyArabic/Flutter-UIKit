@@ -73,8 +73,8 @@ class _AgoraVideoButtonsState extends State<AgoraVideoButtons> {
 
     Map buttonMap = <BuiltInButtons, Widget>{
       BuiltInButtons.toggleMic: _muteMicButton(),
-      BuiltInButtons.callEnd: _disconnectCallButton(),
-      BuiltInButtons.switchCamera: _switchCameraButton(),
+      //BuiltInButtons.callEnd: _disconnectCallButton(),
+      //BuiltInButtons.switchCamera: _switchCameraButton(),
       BuiltInButtons.toggleCamera: _disableVideoButton(),
     };
 
@@ -110,14 +110,16 @@ class _AgoraVideoButtonsState extends State<AgoraVideoButtons> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           _muteMicButton(),
-                          _disconnectCallButton(),
-                          _switchCameraButton(),
-                          _disableVideoButton(),
+                          //_disconnectCallButton(),
+                          //_switchCameraButton(),
+                          
                           if (widget.extraButtons != null)
                             for (var i = 0;
                                 i < widget.extraButtons!.length;
                                 i++)
-                              widget.extraButtons![i]
+                              widget.extraButtons![i],
+                          
+                          _disableVideoButton(),
                         ],
                       )
                     : Row(
